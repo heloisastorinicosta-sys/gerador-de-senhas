@@ -6,54 +6,56 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #121212;
+    background: #0f172a;
     color: white;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     padding: 20px;
 }
 
-.conteudo {
-    background: #1e1e1e;
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: #1e293b;
     padding: 30px;
     border-radius: 15px;
-    width: 100%;
-    max-width: 600px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
 }
 
-.conteudo-titulo {
+.header {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.conteudo-titulo img {
+.icone {
     width: 80px;
     margin-bottom: 10px;
 }
 
-.titulo-principal {
-    font-size: 2rem;
-    color: #4caf50;
+.header h1 {
+    color: #38bdf8;
+    margin-bottom: 10px;
 }
 
-.titulo-secundario {
-    font-size: 1rem;
-    color: #ccc;
-    margin-top: 10px;
+.header p {
+    color: #cbd5e1;
 }
 
-.conteudo-senha {
+.senha-box {
+    margin-bottom: 30px;
+}
+
+.senha-box label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.senha-container {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
-}
-
-.conteudo-senha label {
-    width: 100%;
+    margin-bottom: 15px;
 }
 
 #campo-senha {
@@ -61,68 +63,86 @@ body {
     padding: 12px;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
-#gerar {
-    padding: 12px 20px;
+button {
+    cursor: pointer;
     border: none;
     border-radius: 8px;
-    background: #4caf50;
-    color: white;
-    cursor: pointer;
     font-weight: bold;
 }
 
-#gerar:hover {
-    background: #43a047;
+#copiar {
+    background: #64748b;
+    color: white;
+    padding: 12px 16px;
 }
 
-.parametro-titulo {
+#copiar:hover {
+    background: #475569;
+}
+
+.btn-gerar {
+    width: 100%;
+    padding: 14px;
+    background: #38bdf8;
+    color: white;
+    font-size: 16px;
+}
+
+.btn-gerar:hover {
+    background: #0ea5e9;
+}
+
+.configuracoes h2 {
     margin-bottom: 20px;
 }
 
-.parametro-senha {
-    margin-bottom: 20px;
+.campo {
+    margin-bottom: 25px;
 }
 
-.parametro-senha h4 {
+.campo h3 {
     margin-bottom: 10px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
 }
 
 #tamanho {
     width: 100%;
-}
-
-#valor-tamanho {
-    display: inline-block;
-    margin-top: 8px;
-    font-weight: bold;
-    color: #4caf50;
-}
-
-.parametro-senha label {
-    display: block;
-    margin-bottom: 8px;
-    cursor: pointer;
+    margin-top: 10px;
 }
 
 .barra {
     width: 100%;
     height: 12px;
-    background: #333;
-    border-radius: 6px;
+    background: #334155;
+    border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 10px;
 }
 
 #forca {
+    width: 60%;
     height: 100%;
-    width: 50%;
     background: orange;
     transition: 0.3s;
 }
 
 #texto-forca {
+    margin-top: 10px;
     font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .senha-container {
+        flex-direction: column;
+    }
+
+    #copiar {
+        width: 100%;
+    }
 }
