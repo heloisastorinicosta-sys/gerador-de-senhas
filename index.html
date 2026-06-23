@@ -1,52 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Senhas</title>
+    <title>Gerador de Senhas Seguras</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <section class="conteudo">
 
-        <div class="conteudo-titulo">
-            <img src="unlock.svg" alt="cadeado">
-            <h2 class="titulo-principal">Gerador de Senhas</h2>
-            <h3 class="titulo-secundario">
-                Gere instantaneamente uma senha aleatória e segura
-            </h3>
+    <main class="container">
+
+        <div class="header">
+            <img src="unlock.svg" alt="Ícone de cadeado" class="icone">
+            <h1>Gerador de Senhas</h1>
+            <p>Crie senhas fortes e seguras em segundos.</p>
         </div>
 
-        <div class="conteudo-senha">
-            <label for="campo-senha">Senha</label>
-            <input type="text" id="campo-senha" readonly>
-            <button id="gerar">Gerar Senha</button>
-        </div>
+        <div class="senha-box">
+            <label for="campo-senha">Senha Gerada</label>
 
-        <div class="parametro">
-            <h3 class="parametro-titulo">Personalize sua senha</h3>
-
-            <div class="parametro-senha">
-                <h4>Número de caracteres</h4>
-
-                <input type="range" id="tamanho" min="4" max="32" value="12">
-
-                <span id="valor-tamanho">12</span>
+            <div class="senha-container">
+                <input type="text" id="campo-senha" readonly>
+                <button id="copiar">Copiar</button>
             </div>
 
-            <div class="parametro-senha">
-                <h4>Características da senha</h4>
+            <button id="gerar" class="btn-gerar">
+                Gerar Nova Senha
+            </button>
+        </div>
+
+        <div class="configuracoes">
+
+            <h2>Personalização</h2>
+
+            <div class="campo">
+                <label for="tamanho">
+                    Tamanho da senha:
+                    <span id="valor-tamanho">12</span>
+                </label>
+
+                <input
+                    type="range"
+                    id="tamanho"
+                    min="4"
+                    max="32"
+                    value="12">
+            </div>
+
+            <div class="campo">
+                <h3>Tipos de caracteres</h3>
 
                 <label>
                     <input type="checkbox" id="maiusculas" checked>
-                    Letras Maiúsculas
+                    Letras maiúsculas
                 </label>
 
                 <label>
                     <input type="checkbox" id="minusculas" checked>
-                    Letras Minúsculas
+                    Letras minúsculas
                 </label>
 
                 <label>
@@ -60,8 +73,8 @@
                 </label>
             </div>
 
-            <div class="parametro-senha">
-                <h4>Força da senha</h4>
+            <div class="campo">
+                <h3>Força da senha</h3>
 
                 <div class="barra">
                     <div id="forca"></div>
@@ -72,7 +85,7 @@
 
         </div>
 
-    </section>
+    </main>
 
     <script src="script.js"></script>
 
